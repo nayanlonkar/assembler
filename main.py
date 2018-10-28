@@ -23,8 +23,6 @@ for i in range(len(list1)):
         if list1[i][1] in data_type:
             list1[i][2] = "".join(list1[i][2:])
             list1[i] = list1[i][:3]
-#print(list1)
-#print('\n')
 #--------------------------------------------------------------------------------------------------------------------------------------------------
 #symbol table
 (sym_table,label_table) = symbol_table(list1)
@@ -49,9 +47,8 @@ if (action == '-s'):
         print('\n')
 #-------------------------------------------------------------------------------------------------------------------------------------------------
 #literal table
+lit_table = literal_table(list1)
 if (action == '-l'): 
-    #literal_table(sym_table)
-    lit_table = literal_table(list1)
     print('\n')
     print("                                                    ** LITERAL TABLE **                                                ")
     print("=======================================================================================================================")
