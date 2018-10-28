@@ -20,13 +20,23 @@ def hex1(arg1):
     temp2 = [] 
     for i in temp:
         if int(i) in [0,1,2,3,4,5,6,7,8,9]:
-            temp2.append('0'+i)
+            #temp2.append('0'+i)
+            tempp = ('0'+i)
+            tempp = (tempp) + '0'*(8- len(tempp))
+            temp2.append(tempp)
         elif int(i) == 10:
-            temp2.append('0'+str(hex(int(i)))[2:])
+            #temp2.append('0'+str(hex(int(i)))[2:])
+            tempp = ('0'+str(hex(int(i)))[2:])
+            tempp = (tempp) + '0'*(8- len(tempp))
+            temp2.append(tempp)
         else:
             a = str(hex(int(i)))
-            temp2.append(a[2:])
-    temp2 = ",".join(temp2)
+            #temp2.append(a[2:])
+            tempp = a[2:]
+            tempp = (tempp) + '0'*(8- len(tempp))
+            temp2.append(tempp)
+
+    temp2 = "".join(temp2)
     return temp2
 
 def hex2(arg1):
@@ -43,6 +53,7 @@ def hex2(arg1):
                 #a = str(hex(ord(j)))[2:]
                 #temp3 += a
     return temp3
+
 def hex2(arg1):
     temp = arg1.split(',')
     temp2 = ''
