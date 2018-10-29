@@ -3,6 +3,7 @@ from sys import argv
 from validate import *
 from symbol_table import *
 from literal_table import *
+from intermediate import *
 
 script,action,filename = argv
 #-----------------------------------------------------------------------
@@ -58,9 +59,8 @@ if (action == '-l'):
         for j in i:
             print(j, end='\t\t\t')
         print('\n')
-
-
-
-
-
-
+#-------------------------------------------------------------------------------------------------------------------------------------------------
+if (action == '-i'):
+    intermediate(list1,sym_table,label_table,lit_table)
+    print("Intermediate file is generated")
+#-------------------------------------------------------------------------------------------------------------------------------------------------
