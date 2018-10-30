@@ -12,5 +12,16 @@ section .text
 main:
     mov eax, 10
     mov ebx, 25
-    jmp abc
-    pqr:
+    add eax, ebx
+	mov eax, ebx
+	mov eax, eax
+	sub eax, ecx
+	add eax, 10
+	add ebx, 10
+	sub ebx, 10
+	sub edi, 20
+	sub eax, 30
+	mov eax, a
+	mov ecx, a
+	mov ebx, a
+	add eax, ecx
